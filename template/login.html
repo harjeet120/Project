@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <style>
+
+    .container span{
+    text-transform:uppercase;
+    display:block;
+    }
+    .text{
+    padding:10px;
+    font-size:60px;
+    font-weight:600;
+    }
+     nav ul{
+    float:right;
+    margin-right:30px;
+    }
+    nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    }
+    nav ul li:hover{
+    background-color: #0005;
+    height: 20px;
+    }
+    nav ul li a{
+    text-decoration: none;
+    color: brown;
+    padding:30px;
+    font-weight:bolder;
+    }
+    li{
+    float:left;
+     }
+        #button1{
+        padding:10px;
+        background-color:transparent;
+        font-size:15px;
+        border-radius:20px;
+        font-weight:bolder;
+        }
+        #button2{
+        padding:10px;
+        background-color:transparent;
+        font-size:15px;
+        border-radius:20px;
+        font-weight:bolder;
+        width:200px;
+        border:2px solid teal;
+        background: teal;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+</head>
+<body>
+    <form action="login" method="post">
+        {% csrf_token %}
+         <nav>
+            <ul>
+                <li><a href="home">Home</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="page">login</a></li>
+                <li><a href="register">register</a></li>
+                <li><a href="contact">Contact</a></li>
+            </ul>
+     </nav>
+            <font size="20"><font color="red"><span class="text">Tour</span></font></font>
+            <font size="20"><font color="green"><span class="text">&</span></font></font>
+            <font size="20"><font color="navy"><span class="text">Tr@vel$</span></font></font>
+
+    <center style="color:teal;">
+        <p align="center"><font size="5"><span class="text">LOGIN</span></font></p>
+        <input type="text"     name="username"   required placeholder="username" id="button1"><br>
+        <input type="password" name="password"   required placeholder="password" id="button1"><br><br>
+        <input type="checkbox" class="chech-box"><font size="3">Remember Password</font><br><br>
+        <button type="submit" id="button2">login</button><br><br>
+        <font size="3" font color="teal">NOT A MEMBER?</font><br><br>
+        <a href="register">REGISTER</a>
+    </center>
+    </form>
+</body>
+</html>
+
+

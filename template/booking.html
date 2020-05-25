@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>data</title>
+    <style type="text/css">
+    nav ul{
+    float:right;
+    margin-right:30px;
+    }
+    nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    }
+    nav ul li:hover{
+    background-color: #0005;
+    height: 20px;
+    }
+    nav ul li a{
+    text-decoration: none;
+    color: brown;
+    padding:30px;
+    font-weight:bolder;
+    }
+    li{
+    float:left;
+     }
+        #button{
+        padding:10px;
+        background-color:transparent;
+        font-size:12px;
+
+        border-radius:20px;
+        font-weight:bolder;
+        width:100px;
+        }
+    </style>
+</head>
+<body>
+<form action="" method="post">
+    {% csrf_token %}
+    <nav>
+        <ul>
+            <li><a href="../places">View Places</a></li>
+            <li><a href="../detail">View Details</a></li>
+            <li><a href="../home">logout</a></li>
+        </ul>
+    </nav>
+
+    <left>
+        <font size="20"><font color="red"><font weight="bolder">Tour</font></font><font color="green"><font weight="bolder">&</font>
+        </font><font weight="bolder"><font color="navy">Tr@vel$</font>
+            </font></font>
+    </left>
+
+        <center>
+
+            Place = {{y.DestinationPlaces}}         <br>
+            Number of Days = {{y.NumberofDays}}    <br>
+            stay charge = {{y.StayCharge}}         <br>
+            food charge = {{y.FoodCharge}}       <br>
+            charge = {{y.CarCharge}}                 <br>
+            {% if i.mode_of_travel_car_flight == "car" %}
+            charge = {{y.FlightCharge}}
+            {% endif %}
+
+            {% if i.mode_of_travel_car_flight == "flight" %}
+            {% endif %}                              <br>
+
+            <br>
+            <input type="text"     name="no_of_adults"              placeholder="no_of_adults"  id="button"><br>
+            <input type="text"     name="no_of_childrens"           placeholder="no_of_childrens" id="button">
+            <input type="text"     name="no_of_rooms"               placeholder="no_of_rooms"   id="button"><br>
+            <input type="text"     name="want_for_meal"              placeholder="want_for_meal"  id="button">
+            <input type="text"     name="mode_of_travel_car_flight"  placeholder="mode_of_travel_car_flight" id="button"><br>
+            <input type="date"     name="departure_date"             placeholder="departure_date" id="button">
+            <input type="date"     name="arrival_date"               placeholder="arrival_date"   id="button"><br>
+            <input type="text"     name="phone_number"                required placeholder="phone_number" id="button">
+            <input type="text"     name="city"                       required placeholder="city" id="button"><br><br>
+            <a href="{% url 'paymentMode' pk=y.pk %}"><button type="save" id="button">your booking is confirmed</button></a><br><br><br>
+
+
+
+        </center>
+</form>
+</body>
+</html>

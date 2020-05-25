@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>har</title>
+    <style type="text/css">
+    .container span{
+    text-transform:uppercase;
+    display:block;
+    }
+    .text1{
+    font-size:60px;
+    font-weight:600;
+    }
+    body{
+    background: #0002;
+    }
+    nav ul{
+    float:right;
+    margin-right:30px;
+    }
+    nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    }
+    nav ul li:hover{
+    background-color: #0005;
+    height: 20px;
+    }
+    nav ul li a{
+    text-decoration: none;
+    color: brown;
+    padding:30px;
+    font-weight:bolder;
+    }
+    li{
+    float:left;
+     }
+    #button2{
+    padding:10px;
+    font-size:15px;
+    border-radius:20px;
+    font-weight:bolder;
+    }
+    #button{
+     padding:10px;
+     font-size:15px;
+     border-radius:20px;
+     font-weight:bolder;
+     }
+
+    </style>
+</head>
+<body>
+      <form action="home" method="post">
+          {% csrf_token %}
+        <nav>
+            <ul>
+                <li><a href="home">Home</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="page">login</a></li>
+                <li><a href="register">register</a></li>
+                <li><a href="contact">Contact</a></li>
+
+            </ul>
+        </nav>
+        <left>
+            <font size="20"><font color="red"><font weight="bolder">Tour</font></font><font color="green"><font weight="bolder">&</font>
+        </font><font weight="bolder"><font color="navy">Tr@vel$</font>
+            </font></font>
+        </left><br>
+        <center>
+           <img src="static/images/dotravel.jpg" width="100%" height="50%" /><br><br><br><br>
+        </center>
+        <div><center>
+            <font size="10"><font color="teal"><span class="text1">EXPLORE <br>THE<br> WORLD</span></font></font>
+        </center></div>
+        <center>
+            <br><img src="static/images/note.jpg" width="50%" height="50%" /><br><br>
+            <font size="10"><font color="purple"><span class="text1">VISIT<br>EVERYWHERE</span></font></font><br><br>
+        </center>
+        <center>
+            <img src="static/images/plates.jpg" width="50%" height="50%" /><br><br>
+        </center>
+        <center>
+            <font size="10"><font color="green"><span class="text1">LETS TR@VEL <br>LIVE THE MOMENT</span></font></font><br><br>
+        </center>
+        <center>
+            <img src="static/images/imagee.jpg" width="50%" height="50%" />
+        </center><br>
+      </form>
+</body>
+</html>

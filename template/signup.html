@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>signup</title>
+    <style>
+        #button1{
+        padding:10px;
+        background-color:transparent;
+        font-size:15px;
+        border-radius:20px;
+        font-weight:bolder;
+        }
+        #button2{
+        padding:10px;
+        font-size:15px;
+        border-radius:20px;
+        font-weight:bolder;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/signup.css' %}">
+</head>
+<body>
+<h2>
+    <form action="signup" method="post">
+        {% csrf_token %}
+    <center style="color:purple;">
+        <br><p><font size ="30">Tour & Tr@vel<br> $peci@lly for Everyone....<br></font></p></center>
+        <p align="center"><font color="purple"><font size="5">Register<br>
+        <input type="text" name="username"    required placeholder="username" id="button1"><br>
+        <input type="text" name="firstname"   required placeholder="firstname" id="button1">
+        <input type="text" name="lastname"    required placeholder="lastname" id="button1"><br>
+        <input type="text" name="gender"      required placeholder="gender" id="button1">
+        <input type="text" name="dateofbirth" required placeholder="dateofbirth" id="button1"><br>
+        <input type="text" name="address"     required placeholder="address" id="button1">
+        <input type="text" name="city"        required placeholder="city" id="button1"><br>
+        <input type="text" name="mobilenumber"required placeholder="mobilenumber" id="button1">
+        <input type="text" name="email"       required placeholder="email" id="button1"><br>
+        <input type="password" name="password"        required placeholder="password" id="button1">
+        <input type="password" name="confirmpassword" required placeholder="confirmpassword" id="button1"><br>
+        <input type="checkbox" class="chech-box"><font size="3">Remember Password</font><br>
+            <a href="places"><button type="submit" id="button1">signup</button></a><br>
+            <a href="places">signup</a>
+        </font></font></p></form>
+</h2>
+</body>
+</html>
